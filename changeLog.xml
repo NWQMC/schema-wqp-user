@@ -10,6 +10,6 @@
 		<runningAs username="WQP_USER" />
     </preConditions>
 
-    <include file="initialConfig/initialConfigMaster.xml" relativeToChangelogFile="true"/>
+    <include file="changeLog1/changeLog.xml" relativeToChangelogFile="true"/>
 
 </databaseChangeLog>
