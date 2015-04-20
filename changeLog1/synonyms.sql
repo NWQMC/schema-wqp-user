@@ -22,10 +22,6 @@ create or replace synonym county for wqp_core.county;
 create or replace synonym data_source for wqp_core.data_source;
 --rollback drop synonym data_source;
  
---changeset drsteini:1SynonymsAF
-create or replace synonym huc8 for wqp_core.;
---rollback drop synonym ;
- 
 --changeset drsteini:1SynonymsAG
 create or replace synonym last_etl for wqp_core.last_etl;
 --rollback drop synonym last_etl;
