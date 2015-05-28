@@ -77,3 +77,7 @@ create or replace synonym station_sum for wqp_core.station_sum;
 --changeset drsteini:1SynonymsAU
 create or replace synonym log_helper for wqp_core.log_helper;
 --rollback drop synonym log_helper;
+
+--changeset drsteini:1SynonymsAV
+create or replace synonym project for wqp_core.project;
+--rollback drop synonym project;
