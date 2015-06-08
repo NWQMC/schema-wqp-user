@@ -31,20 +31,20 @@ create or replace synonym organization for wqp_core.organization;
 --rollback drop synonym organization;
  
 --changeset drsteini:1SynonymsAI
-create or replace synonym pc_result for wqp_core.pc_result;
---rollback drop synonym pc_result;
+create or replace synonym result for wqp_core.result;
+--rollback drop synonym result;
  
 --changeset drsteini:1SynonymsAJ
-create or replace synonym pc_result_ct_sum for wqp_core.pc_result_ct_sum;
---rollback drop synonym pc_result_ct_sum;
+create or replace synonym result_ct_sum for wqp_core.result_ct_sum;
+--rollback drop synonym result_ct_sum;
  
 --changeset drsteini:1SynonymsAK
-create or replace synonym pc_result_nr_sum for wqp_core.pc_result_nr_sum;
---rollback drop synonym pc_result_nr_sum;
+create or replace synonym result_nr_sum for wqp_core.result_nr_sum;
+--rollback drop synonym result_nr_sum;
  
 --changeset drsteini:1SynonymsAL
-create or replace synonym pc_result_sum for wqp_core.pc_result_sum;
---rollback drop synonym pc_result_sum;
+create or replace synonym result_sum for wqp_core.result_sum;
+--rollback drop synonym result_sum;
  
 --changeset drsteini:1SynonymsAM
 create or replace synonym public_srsnames for wqp_core.public_srsnames;
