@@ -81,3 +81,7 @@ create or replace synonym log_helper for wqp_core.log_helper;
 --changeset drsteini:1SynonymsAV
 create or replace synonym project for wqp_core.project;
 --rollback drop synonym project;
+
+--changeset drsteini:1SynonymsAW
+create or replace synonym assemblage for wqp_core.assemblage;
+--rollback drop synonym assemblage;
