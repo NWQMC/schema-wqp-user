@@ -86,6 +86,6 @@ create or replace synonym project for wqp_core.project;
 create or replace synonym assemblage for wqp_core.assemblage;
 --rollback drop synonym assemblage;
 
---changeset drsteini:1SynonymsAV
+--changeset drsteini:1SynonymsAX
 create or replace synonym taxonomic_name for wqp_core.taxonomic_name;
 --rollback drop synonym taxonomic_name;
