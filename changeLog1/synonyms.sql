@@ -89,3 +89,7 @@ create or replace synonym assemblage for wqp_core.assemblage;
 --changeset drsteini:1SynonymsAX
 create or replace synonym taxa_name for wqp_core.taxa_name;
 --rollback drop synonym taxa_name;
+
+--changeset drsteini:WQP-788-create_sysnonym_project_dim
+create or replace synonym project_dim for wqp_core.project_dim;
+--rollback drop synonym project_dim;
