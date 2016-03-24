@@ -93,3 +93,15 @@ create or replace synonym taxa_name for wqp_core.taxa_name;
 --changeset drsteini:WQP-788-create_sysnonym_project_dim
 create or replace synonym project_dim for wqp_core.project_dim;
 --rollback drop synonym project_dim;
+
+--changeset drsteini:WQP-767-create_synonym_states
+create synonym states for wqp_core.states;
+--rollback drop synonym states;
+
+--changeset drsteini:WQP-767-create_synonym_huc8_conus_hi_ak_pr_dis
+create synonym huc8_conus_hi_ak_pr_dis for wqp_core.huc8_conus_hi_ak_pr_dis;
+--rollback drop synonym huc8_conus_hi_ak_pr_dis;
+
+--changeset drsteini:WQP-767-create_synonym_us_counties_dis_20121015
+create synonym us_counties_dis_20121015 for wqp_core.us_counties_dis_20121015;
+--rollback drop synonym us_counties_dis_20121015;
