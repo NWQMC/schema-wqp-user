@@ -105,3 +105,11 @@ create or replace synonym huc8_conus_hi_ak_pr_dis for wqp_core.huc8_conus_hi_ak_
 --changeset drsteini:WQP-767-create_synonym_us_counties_dis_20121015
 create or replace synonym us_counties_dis_20121015 for wqp_core.us_counties_dis_20121015;
 --rollback drop synonym us_counties_dis_20121015;
+
+--changeset drsteini:WQP-916-create-synonym-activity
+create or replace synonym activity for wqp_core.activity;
+--rollback drop synonym activity;
+
+--changeset drsteini:WQP-916-create-synonym-act_metric
+create or replace synonym act_metric for wqp_core.act_metric;
+--rollback drop synonym act_metric;
