@@ -117,3 +117,7 @@ create or replace synonym act_metric for wqp_core.act_metric;
 --changeset drsteini:WQP-1023-create-synonym-activity_sum
 create or replace synonym activity_sum for wqp_core.activity_sum;
 --rollback drop synonym activity_sum;
+
+--changeset drsteini:WQP-1033-create-synonym-r_detect_qnt_lmt
+create or replace synonym r_detect_qnt_lmt for wqp_core.r_detect_qnt_lmt;
+--rollback drop synonym r_detect_qnt_lmt;
