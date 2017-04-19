@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - preConditions:
+    - dbms:
+        type: oracle
+    - or:
+      - runningAs:
+          username: wqp_user
+      - runningAs:
+          username: int_wqp_user
+
+  - include:
+      file: "synonyms/changeLog.yml"
+      relativeToChangelogFile: true

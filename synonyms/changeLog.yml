@@ -1,0 +1,236 @@
+databaseChangeLog:
+  - preConditions:
+    - dbms:
+        type: oracle
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.activity"
+      changes:
+        - sql:
+            sql: create or replace synonym activity for ${dataOwner}.activity;
+        - rollback: drop synonym activity;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.activity_sum"
+      changes:
+        - sql:
+            sql: create or replace synonym activity_sum for ${dataOwner}.activity_sum;
+        - rollback: drop synonym activity_sum;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.act_metric"
+      changes:
+        - sql:
+            sql: create or replace synonym act_metric for ${dataOwner}.act_metric;
+        - rollback: drop synonym act_metric;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.assemblage"
+      changes:
+        - sql:
+            sql: create or replace synonym assemblage for ${dataOwner}.assemblage;
+        - rollback: drop synonym assemblage;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.char_name"
+      changes:
+        - sql:
+            sql: create or replace synonym char_name for ${dataOwner}.char_name;
+        - rollback: drop synonym char_name;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.char_type"
+      changes:
+        - sql:
+            sql: create or replace synonym char_type for ${dataOwner}.char_type;
+        - rollback: drop synonym char_type;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.country"
+      changes:
+        - sql:
+            sql: create or replace synonym country for ${dataOwner}.country;
+        - rollback: drop synonym country;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.county"
+      changes:
+        - sql:
+            sql: create or replace synonym county for ${dataOwner}.county;
+        - rollback: drop synonym county;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.data_source"
+      changes:
+        - sql:
+            sql: create or replace synonym data_source for ${dataOwner}.data_source;
+        - rollback: drop synonym data_source;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.huc8_conus_hi_ak_pr_dis"
+      changes:
+        - sql:
+            sql: create or replace synonym huc8_conus_hi_ak_pr_dis for ${dataOwner}.huc8_conus_hi_ak_pr_dis;
+        - rollback: drop synonym huc8_conus_hi_ak_pr_dis;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.last_etl"
+      changes:
+        - sql:
+            sql: create or replace synonym last_etl for ${dataOwner}.last_etl;
+        - rollback: drop synonym last_etl;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.log_helper"
+      changes:
+        - sql:
+            sql: create or replace synonym log_helper for ${dataOwner}.log_helper;
+        - rollback: drop synonym log_helper;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.organization"
+      changes:
+        - sql:
+            sql: create or replace synonym organization for ${dataOwner}.organization;
+        - rollback: drop synonym organization;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.project"
+      changes:
+        - sql:
+            sql: create or replace synonym project for ${dataOwner}.project;
+        - rollback: drop synonym project;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.project_dim"
+      changes:
+        - sql:
+            sql: create or replace synonym project_dim for ${dataOwner}.project_dim;
+        - rollback: drop synonym project_dim;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.public_srsnames"
+      changes:
+        - sql:
+            sql: create or replace synonym public_srsnames for ${dataOwner}.public_srsnames;
+        - rollback: drop synonym public_srsnames;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.qwportal_summary"
+      changes:
+        - sql:
+            sql: create or replace synonym qwportal_summary for ${dataOwner}.qwportal_summary;
+        - rollback: drop synonym qwportal_summary;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.r_detect_qnt_lmt"
+      changes:
+        - sql:
+            sql: create or replace synonym r_detect_qnt_lmt for ${dataOwner}.r_detect_qnt_lmt;
+        - rollback: drop synonym r_detect_qnt_lmt;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.result"
+      changes:
+        - sql:
+            sql: create or replace synonym result for ${dataOwner}.result;
+        - rollback: drop synonym result;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.result_sum"
+      changes:
+        - sql:
+            sql: create or replace synonym result_sum for ${dataOwner}.result_sum;
+        - rollback: drop synonym result_sum;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.sample_media"
+      changes:
+        - sql:
+            sql: create or replace synonym sample_media for ${dataOwner}.sample_media;
+        - rollback: drop synonym sample_media;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.site_type"
+      changes:
+        - sql:
+            sql: create or replace synonym site_type for ${dataOwner}.site_type;
+        - rollback: drop synonym site_type;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.state"
+      changes:
+        - sql:
+            sql: create or replace synonym state for ${dataOwner}.state;
+        - rollback: drop synonym state;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.states"
+      changes:
+        - sql:
+            sql: create or replace synonym states for ${dataOwner}.states;
+        - rollback: drop synonym states;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.station"
+      changes:
+        - sql:
+            sql: create or replace synonym station for ${dataOwner}.station;
+        - rollback: drop synonym station;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.station_sum"
+      changes:
+        - sql:
+            sql: create or replace synonym station_sum for ${dataOwner}.station_sum;
+        - rollback: drop synonym station_sum;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.taxa_name"
+      changes:
+        - sql:
+            sql: create or replace synonym taxa_name for ${dataOwner}.taxa_name;
+        - rollback: drop synonym taxa_name;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.us_counties_dis_20121015"
+      changes:
+        - sql:
+            sql: create or replace synonym us_counties_dis_20121015 for ${dataOwner}.us_counties_dis_20121015;
+        - rollback: drop synonym us_counties_dis_20121015;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.web_service_log"
+      changes:
+        - sql:
+            sql: create or replace synonym web_service_log for ${dataOwner}.web_service_log;
+        - rollback: drop synonym web_service_log;
