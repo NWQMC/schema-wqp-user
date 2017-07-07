@@ -6,4 +6,4 @@ The scripts are executed via a Jenkins job.
 
 Parameters used for configuration:
 
-* **dataOwner** - The schema in which these scripts are run and objects created.
+* **dataOwner** - The schema which owns the data.
