@@ -234,3 +234,19 @@ databaseChangeLog:
         - sql:
             sql: create or replace synonym web_service_log for ${dataOwner}.web_service_log;
         - rollback: drop synonym web_service_log;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.pkg_dynamic_list"
+      changes:
+        - sql:
+            sql: create or replace synonym pkg_dynamic_list for ${dataOwner}.pkg_dynamic_list;
+        - rollback: drop synonym pkg_dynamic_list;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.typ_vctbl"
+      changes:
+        - sql:
+            sql: create or replace synonym typ_vctbl for ${dataOwner}.typ_vctbl;
+        - rollback: drop synonym typ_vctbl;
