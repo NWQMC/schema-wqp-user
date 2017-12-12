@@ -253,8 +253,8 @@ databaseChangeLog:
         
   - changeSet:
       author: ayan
-      id: "create.synonum.project_data"
+      id: "create.synonym.project_data"
       changes:
         - sql:
-            sql: create or replace synoym project_data for ${dataOwner}.project_data
+            sql: create or replace synonym project_data for ${dataOwner}.project_data
         - rollback: drop synonym project_data;
