@@ -250,3 +250,11 @@ databaseChangeLog:
         - sql:
             sql: create or replace synonym typ_vctbl for ${dataOwner}.typ_vctbl;
         - rollback: drop synonym typ_vctbl;
+        
+  - changeSet:
+      author: ayan
+      id: "create.synonum.project_data"
+      changes:
+        - sql:
+            sql: create or replace synoym project_data for ${dataOwner}.project_data
+        - rollback: drop synonym project_data;
