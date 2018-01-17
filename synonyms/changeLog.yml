@@ -101,6 +101,14 @@ databaseChangeLog:
 
   - changeSet:
       author: drsteini
+      id: "create.synonym.monitoring_loc"
+      changes:
+        - sql:
+            sql: create or replace synonym monitoring_loc for ${dataOwner}.monitoring_loc;
+        - rollback: drop synonym monitoring_loc;
+
+  - changeSet:
+      author: drsteini
       id: "create.synonym.organization"
       changes:
         - sql:
