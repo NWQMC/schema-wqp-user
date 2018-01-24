@@ -101,6 +101,14 @@ databaseChangeLog:
 
   - changeSet:
       author: drsteini
+      id: "create.synonym.monitoring_loc"
+      changes:
+        - sql:
+            sql: create or replace synonym monitoring_loc for ${dataOwner}.monitoring_loc;
+        - rollback: drop synonym monitoring_loc;
+
+  - changeSet:
+      author: drsteini
       id: "create.synonym.organization"
       changes:
         - sql:
@@ -250,7 +258,7 @@ databaseChangeLog:
         - sql:
             sql: create or replace synonym typ_vctbl for ${dataOwner}.typ_vctbl;
         - rollback: drop synonym typ_vctbl;
-        
+
   - changeSet:
       author: ayan
       id: "create.synonym.project_data"
@@ -258,3 +266,11 @@ databaseChangeLog:
         - sql:
             sql: create or replace synonym project_data for ${dataOwner}.project_data
         - rollback: drop synonym project_data;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.project_object"
+      changes:
+        - sql:
+            sql: create or replace synonym project_object for ${dataOwner}.project_object
+        - rollback: drop synonym project_object;
