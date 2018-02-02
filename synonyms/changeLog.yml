@@ -258,3 +258,11 @@ databaseChangeLog:
         - sql:
             sql: create or replace synonym project_data for ${dataOwner}.project_data
         - rollback: drop synonym project_data;
+
+  - changeSet:
+      author: zmoore
+      id: "create.synonym.prj_ml_weighting"
+      changes:
+        - sql:
+            sql: create or replace synonym prj_ml_weighting for ${dataOwner}.prj_ml_weighting
+        - rollback: drop synonym prj_ml_weighting;
