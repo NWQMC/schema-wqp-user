@@ -13,6 +13,14 @@ databaseChangeLog:
 
   - changeSet:
       author: drsteini
+      id: "create.synonym.activity_object"
+      changes:
+        - sql:
+            sql: create or replace synonym activity_object for ${dataOwner}.activity_object;
+        - rollback: drop synonym activity_object;
+
+  - changeSet:
+      author: drsteini
       id: "create.synonym.activity_sum"
       changes:
         - sql:
@@ -101,6 +109,14 @@ databaseChangeLog:
 
   - changeSet:
       author: drsteini
+      id: "create.synonym.monitoring_loc"
+      changes:
+        - sql:
+            sql: create or replace synonym monitoring_loc for ${dataOwner}.monitoring_loc;
+        - rollback: drop synonym monitoring_loc;
+
+  - changeSet:
+      author: drsteini
       id: "create.synonym.organization"
       changes:
         - sql:
@@ -116,12 +132,36 @@ databaseChangeLog:
         - rollback: drop synonym project;
 
   - changeSet:
+      author: ayan
+      id: "create.synonym.project_data"
+      changes:
+        - sql:
+            sql: create or replace synonym project_data for ${dataOwner}.project_data
+        - rollback: drop synonym project_data;
+
+  - changeSet:
       author: drsteini
       id: "create.synonym.project_dim"
       changes:
         - sql:
             sql: create or replace synonym project_dim for ${dataOwner}.project_dim;
         - rollback: drop synonym project_dim;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.project_object"
+      changes:
+        - sql:
+            sql: create or replace synonym project_object for ${dataOwner}.project_object
+        - rollback: drop synonym project_object;
+
+  - changeSet:
+      author: zmoore
+      id: "create.synonym.prj_ml_weighting"
+      changes:
+        - sql:
+            sql: create or replace synonym prj_ml_weighting for ${dataOwner}.prj_ml_weighting
+        - rollback: drop synonym prj_ml_weighting;
 
   - changeSet:
       author: drsteini
@@ -154,6 +194,14 @@ databaseChangeLog:
         - sql:
             sql: create or replace synonym result for ${dataOwner}.result;
         - rollback: drop synonym result;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.result_object"
+      changes:
+        - sql:
+            sql: create or replace synonym result_object for ${dataOwner}.result_object;
+        - rollback: drop synonym result_object;
 
   - changeSet:
       author: drsteini
@@ -205,6 +253,14 @@ databaseChangeLog:
 
   - changeSet:
       author: drsteini
+      id: "create.synonym.station_object"
+      changes:
+        - sql:
+            sql: create or replace synonym station_object for ${dataOwner}.station_object;
+        - rollback: drop synonym station_object;
+
+  - changeSet:
+      author: drsteini
       id: "create.synonym.station_sum"
       changes:
         - sql:
@@ -250,19 +306,3 @@ databaseChangeLog:
         - sql:
             sql: create or replace synonym typ_vctbl for ${dataOwner}.typ_vctbl;
         - rollback: drop synonym typ_vctbl;
-        
-  - changeSet:
-      author: ayan
-      id: "create.synonym.project_data"
-      changes:
-        - sql:
-            sql: create or replace synonym project_data for ${dataOwner}.project_data
-        - rollback: drop synonym project_data;
-
-  - changeSet:
-      author: zmoore
-      id: "create.synonym.prj_ml_weighting"
-      changes:
-        - sql:
-            sql: create or replace synonym prj_ml_weighting for ${dataOwner}.prj_ml_weighting
-        - rollback: drop synonym prj_ml_weighting;
