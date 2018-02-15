@@ -156,6 +156,14 @@ databaseChangeLog:
         - rollback: drop synonym project_object;
 
   - changeSet:
+      author: zmoore
+      id: "create.synonym.prj_ml_weighting"
+      changes:
+        - sql:
+            sql: create or replace synonym prj_ml_weighting for ${dataOwner}.prj_ml_weighting
+        - rollback: drop synonym prj_ml_weighting;
+
+  - changeSet:
       author: drsteini
       id: "create.synonym.public_srsnames"
       changes:
