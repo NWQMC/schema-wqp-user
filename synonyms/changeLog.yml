@@ -117,6 +117,14 @@ databaseChangeLog:
 
   - changeSet:
       author: drsteini
+      id: "create.synonym.org_data"
+      changes:
+        - sql:
+            sql: create or replace synonym organization for ${dataOwner}.org_data;
+        - rollback: drop synonym org_data;
+
+  - changeSet:
+      author: drsteini
       id: "create.synonym.organization"
       changes:
         - sql:
