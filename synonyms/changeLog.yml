@@ -120,7 +120,7 @@ databaseChangeLog:
       id: "create.synonym.org_data"
       changes:
         - sql:
-            sql: create or replace synonym organization for ${dataOwner}.org_data;
+            sql: create or replace synonym org_data for ${dataOwner}.org_data;
         - rollback: drop synonym org_data;
 
   - changeSet:
