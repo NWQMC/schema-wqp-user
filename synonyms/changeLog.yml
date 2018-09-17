@@ -133,6 +133,14 @@ databaseChangeLog:
 
   - changeSet:
       author: drsteini
+      id: "create.synonym.organization_sum"
+      changes:
+        - sql:
+            sql: create or replace synonym organization_sum for ${dataOwner}.organization_sum;
+        - rollback: drop synonym organization_sum;
+
+  - changeSet:
+      author: drsteini
       id: "create.synonym.project"
       changes:
         - sql:
