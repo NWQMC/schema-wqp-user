@@ -45,6 +45,14 @@ databaseChangeLog:
 
   - changeSet:
       author: drsteini
+      id: "create.synonym.bio_hab_metric"
+      changes:
+        - sql:
+            sql: create or replace synonym bio_hab_metric for ${dataOwner}.act_metric;
+        - rollback: drop synonym bio_hab_metric;
+
+  - changeSet:
+      author: drsteini
       id: "create.synonym.char_name"
       changes:
         - sql:
@@ -109,6 +117,14 @@ databaseChangeLog:
 
   - changeSet:
       author: drsteini
+      id: "create.synonym.ml_grouping"
+      changes:
+        - sql:
+            sql: create or replace synonym ml_grouping for ${dataOwner}.ml_grouping;
+        - rollback: drop synonym ml_grouping;
+
+  - changeSet:
+      author: drsteini
       id: "create.synonym.monitoring_loc"
       changes:
         - sql:
@@ -122,6 +138,14 @@ databaseChangeLog:
         - sql:
             sql: create or replace synonym org_data for ${dataOwner}.org_data;
         - rollback: drop synonym org_data;
+
+  - changeSet:
+      author: drsteini
+      id: "create.synonym.org_grouping"
+      changes:
+        - sql:
+            sql: create or replace synonym org_grouping for ${dataOwner}.org_grouping;
+        - rollback: drop synonym org_grouping;
 
   - changeSet:
       author: drsteini
