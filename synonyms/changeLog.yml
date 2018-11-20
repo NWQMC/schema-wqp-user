@@ -48,7 +48,7 @@ databaseChangeLog:
       id: "create.synonym.bio_hab_metric"
       changes:
         - sql:
-            sql: create or replace synonym bio_hab_metric for ${dataOwner}.act_metric;
+            sql: create or replace synonym bio_hab_metric for ${dataOwner}.bio_hab_metric;
         - rollback: drop synonym bio_hab_metric;
 
   - changeSet:
